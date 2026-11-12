@@ -7,7 +7,8 @@
 }
 
 .work-card {
-  min-width: 0
+  min-width: 0;
+  scroll-margin-top: 105px
 }
 
 .work-featured {

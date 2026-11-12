@@ -12,10 +12,6 @@ function initializeBrandLinks() {
   document.querySelectorAll("[data-brand-project]").forEach((element) => {
     element.textContent = config.projectName;
   });
-  document.querySelectorAll("[data-linked-site-name]").forEach((element) => {
-    element.textContent = config.linkedSiteName;
-  });
-
   document.querySelectorAll("[data-site-link]").forEach((element) => {
     const destination = config.links?.[element.dataset.siteLink];
     if (destination) element.href = destination;
@@ -26,7 +22,7 @@ function initializeBrandLinks() {
   document.querySelectorAll("[data-site-asset]").forEach((element) => {
     const assetPath = config.assets?.[element.dataset.siteAsset];
     if (!assetPath) return;
-    const fallbackPath = config.assets?.fallbackSiteIcon;
+    const fallbackPath = config.assets?.portfolioIcon || config.assets?.fallbackSiteIcon;
 
     if (element instanceof HTMLImageElement) {
       element.addEventListener(

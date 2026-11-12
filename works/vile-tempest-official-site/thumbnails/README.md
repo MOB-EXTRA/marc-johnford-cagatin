@@ -1,1 +1,1 @@
-Add a Vile Tempest Official preview image here. Set the relative image path in this project's `project.json` `thumbnail` field when ready.
+The Vile Tempest Official background thumbnail is `1.png`. Thumbnail names are scoped to this project folder and can be reused by other projects.

@@ -4,7 +4,8 @@
   "eyebrow": "PERSONAL SITE · PLAYER TOOLS",
   "description": "My personal website for player tools, updates, and gaming resources that I create and maintain.",
   "category": "WEB · COMMUNITY",
-  "linkKey": "website",
-  "thumbnail": null,
+  "siteUrl": "https://mob-extra.github.io/Vile-Tempest-Official/index.html",
+  "siteIcon": "https://mob-extra.github.io/Vile-Tempest-Official/assets/img/favicon.png",
+  "thumbnail": "thumbnails/1.png",
   "thumbnailAlt": "Preview of the Vile Tempest Official site"
 }

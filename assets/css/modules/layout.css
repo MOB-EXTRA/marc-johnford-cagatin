@@ -159,7 +159,8 @@
   top: 131px;
   left: 50%;
   transform: translateX(-50%);
-  perspective: 1100px;
+  perspective: 1400px;
+  perspective-origin: 50% 45%;
   z-index: 2;
 }
 
@@ -175,15 +176,16 @@
   inset: 0;
   overflow: hidden;
   border: 1px solid #ffffffc9;
-  border-radius: 8px;
+  border-radius: 10px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  box-shadow: 0 24px 46px #0005;
+  box-shadow: 0 30px 55px #0008, inset 0 1px #ffffff12;
 }
 
 .art-card-front {
   background: #f8f8f3;
-  padding: 0 20px
+  padding: 0 20px;
+  transform: translateZ(5px);
 }
 
 .art-card-back {
@@ -191,7 +193,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(5px);
   background: linear-gradient(145deg, #101e30, #0a111d 72%);
 }
 
@@ -203,10 +205,14 @@
   gap: 12px;
 }
 
-.card-back-monogram {
-  color: #42d2ef;
-  font: 700 20px var(--display);
-  letter-spacing: -.08em;
+.card-back-logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 3px 8px #27c9ed55);
 }
 
 .card-back-index,
@@ -219,6 +225,24 @@
 .card-back-copy {
   display: grid;
   gap: 6px;
+}
+
+.card-back-copy-layer {
+  position: relative;
+  isolation: isolate;
+  transform: translateZ(20px);
+  filter: drop-shadow(0 8px 8px #0008);
+}
+
+.card-back-copy-layer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -5px -9px;
+  border-radius: 3px;
+  background: linear-gradient(100deg, #14273a99, #14273a00 92%);
+  opacity: .72;
+  pointer-events: none;
 }
 
 .card-back-copy strong {
@@ -242,10 +266,10 @@
   top: 340px;
   left: 50%;
   width: min(270px, 65%);
-  height: 18px;
+  height: 24px;
   border-radius: 50%;
   background: #0009;
-  filter: blur(11px);
+  filter: blur(15px);
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -356,10 +380,17 @@
   flex-wrap: wrap
 }
 
-.proof-inner>div span {
+.proof-inner>div a {
   font-size: 12px;
   font-weight: 600;
-  color: #525a50
+  color: #525a50;
+  text-decoration: none;
+  transition: color .2s ease
+}
+
+.proof-inner>div a:hover,
+.proof-inner>div a:focus-visible {
+  color: var(--cyan)
 }
 
 .section {

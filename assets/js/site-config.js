@@ -7,19 +7,17 @@ window.SITE_CONFIG = Object.freeze({
   brandAccent: "Marc Johnford Cagatin",
   nickname: "Vile Tempest",
   projectName: "MOB EXTRA",
-  linkedSiteName: "Vile Tempest Official",
   assets: {
-    siteIcon: "https://mob-extra.github.io/Vile-Tempest-Official/assets/img/favicon.png",
+    portfolioLogo: "assets/images/logo.png",
+    portfolioIcon: "assets/images/favicon.png",
     fallbackSiteIcon: "assets/images/favicon.png",
   },
   links: {
-    website: "https://mob-extra.github.io/Vile-Tempest-Official/index.html",
     youtubeChannel: "https://www.youtube.com/channel/UCbDtYZS08VvB6luAcyn08bQ",
     youtubeVideos:
       "https://www.youtube.com/channel/UCbDtYZS08VvB6luAcyn08bQ/videos",
     youtubeCommunity:
       "https://www.youtube.com/channel/UCbDtYZS08VvB6luAcyn08bQ/community",
-    slimeSpaceHub: "https://mob-extra.github.io/SlimeSpace/",
     emailAddress: "mob.extra.contact@gmail.com",
     emailComposeUrl:
       "mailto:mob.extra.contact@gmail.com?subject=Inquiry%20/%20Commission%20Request%20%E2%80%94%20Vile%20Tempest",
