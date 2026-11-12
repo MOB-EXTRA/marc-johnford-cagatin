@@ -1,4 +1,19 @@
 /* Fills project cards from the editable works manifest and project metadata. */
+function sizeWorkActionButtons() {
+  document.querySelectorAll(".work-card .round-link").forEach((button) => {
+    const label = button.querySelector(".round-link-copy");
+    const icon = button.querySelector(".round-link-icon");
+    if (!label || !icon) return;
+
+    const contentWidth = label.scrollWidth + icon.getBoundingClientRect().width + 43;
+    button.style.setProperty("--expanded-width", `${Math.ceil(contentWidth)}px`);
+  });
+}
+
+sizeWorkActionButtons();
+window.addEventListener("resize", sizeWorkActionButtons, { passive: true });
+document.fonts?.ready?.then(sizeWorkActionButtons).catch(() => {});
+
 function setWorkThumbnail(thumbnail, thumbnailPath) {
   const fallback = window.SITE_CONFIG?.assets?.portfolioLogo ||
     window.SITE_CONFIG?.assets?.portfolioIcon ||

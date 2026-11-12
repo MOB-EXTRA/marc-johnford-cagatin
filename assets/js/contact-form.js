@@ -3,6 +3,21 @@ function initializeContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
+  const serviceSelect = form.elements.namedItem("service");
+  document.querySelectorAll("[data-contact-service]").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!serviceSelect) return;
+      const requestedService = link.dataset.contactService?.trim();
+      const matchingOption = Array.from(serviceSelect.options).find((option) =>
+        option.value === requestedService || option.textContent.trim() === requestedService,
+      );
+      if (!matchingOption) return;
+
+      serviceSelect.value = matchingOption.value;
+      serviceSelect.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
