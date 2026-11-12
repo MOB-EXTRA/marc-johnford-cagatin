@@ -1,0 +1,225 @@
+/* Entrance, scroll reveal, and hover motion. */
+
+/* Motion design */
+.hero-copy>* {
+  animation: rise-in .7s both
+}
+
+.hero-copy .eyebrow {
+  animation-delay: .05s
+}
+
+.hero-copy h1 {
+  animation-delay: .12s
+}
+
+.hero-intro {
+  animation-delay: .2s
+}
+
+.hero-actions {
+  animation: rise-in .7s .28s both
+}
+
+.hero-meta {
+  animation: rise-in .7s .36s both
+}
+
+.hero-art {
+  animation: art-arrive .9s .12s both
+}
+
+.art-orbit {
+  animation: orbit-drift 24s linear infinite
+}
+
+.art-sun {
+  animation: pulse-glow 5s ease-in-out infinite alternate
+}
+
+/* Give the hero's project card a calm, continuous floating motion. */
+.hero-art .art-window {
+  animation: hero-card-float 5s ease-in-out 1s infinite;
+  will-change: transform;
+}
+
+.art-card-inner {
+  animation: hero-card-spin 12s linear infinite;
+  will-change: transform;
+}
+
+.art-card-shadow {
+  animation: hero-card-shadow 5s ease-in-out 1s infinite;
+}
+
+.work-card,.service-card,.about-copy,.about-aside,.contact-wrap>div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .65s ease,transform .65s cubic-bezier(.2,.75,.25,1)
+}
+
+.work-card.is-visible,.service-card.is-visible,.about-copy.is-visible,.about-aside.is-visible,.contact-wrap>div.is-visible {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.work-card:nth-child(2),.service-card:nth-child(2) {
+  transition-delay: .08s
+}
+
+.work-card:nth-child(3),.service-card:nth-child(3) {
+  transition-delay: .16s
+}
+
+.service-card:nth-child(4) {
+  transition-delay: .08s
+}
+
+.service-card:nth-child(5) {
+  transition-delay: .16s
+}
+
+.service-card:nth-child(6) {
+  transition-delay: .24s
+}
+
+.work-card:hover .work-visual {
+  box-shadow: 0 18px 55px #0005
+}
+
+.work-card:hover .portal-orb {
+  transform: scale(1.04)
+}
+
+.work-card:hover .sheet-board {
+  transform: rotate(0) translateY(-3px)
+}
+
+.code-float {
+  animation: float-card 5s ease-in-out infinite
+}
+
+.float-b {
+  animation-delay: -1.6s
+}
+
+.float-c {
+  animation-delay: -3.2s
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes art-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(.985)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1)
+  }
+}
+
+@keyframes orbit-drift {
+  to {
+    transform: translateX(-50%) rotate(360deg)
+  }
+}
+
+@keyframes pulse-glow {
+  from {
+    filter: brightness(.85);
+    transform: scale(.97)
+  }
+
+  to {
+    filter: brightness(1.14);
+    transform: scale(1.03)
+  }
+}
+
+@keyframes hero-card-float {
+  0%,100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -7px);
+  }
+}
+
+@keyframes hero-card-spin {
+  from {
+    transform: rotateX(5deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(5deg) rotateY(360deg);
+  }
+}
+
+@keyframes hero-card-shadow {
+  0%,100% {
+    opacity: .42;
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  50% {
+    opacity: .25;
+    transform: translateX(-50%) scaleX(.84);
+  }
+}
+
+@keyframes float-card {
+  0%,100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-7px)
+  }
+}
+
+@media(max-width:640px) {
+  .site-nav {
+    background: #0a111c;
+    border-color: #ffffff20
+  }
+
+  .hero-art {
+    border-color: #ffffff1b
+  }
+
+  .hero-meta {
+    color: #8396a9
+  }
+
+  .about-stamp {
+    background: radial-gradient(circle,#112537,#0a111b 70%)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+    animation-duration: .01ms!important;
+    animation-iteration-count: 1!important;
+    scroll-behavior: auto!important;
+    transition-duration: .01ms!important
+  }
+
+  .work-card,.service-card,.about-copy,.about-aside,.contact-wrap>div {
+    opacity: 1;
+    transform: none
+  }
+}

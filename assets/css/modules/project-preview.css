@@ -1,0 +1,76 @@
+/* Favicon badge and optional project preview image. */
+.portal-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #42d0f2;
+  font: 600 0.88rem var(--display);
+  letter-spacing: 0.01em;
+}
+
+.portal-site-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #68d9f2a0;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px #21bde43b;
+}
+
+.project-thumbnail {
+  position: absolute;
+  z-index: 3;
+  right: 24px;
+  bottom: 24px;
+  width: min(28%, 180px);
+  aspect-ratio: 4 / 3;
+  border: 1px solid #78d7f266;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 10px 32px #0008;
+}
+
+.project-thumbnail[hidden] {
+  display: none;
+}
+.portal-background-icon {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 48%;
+  width: min(64%, 420px);
+  height: auto;
+  max-height: 78%;
+  object-fit: contain;
+  opacity: 0.12;
+  filter: drop-shadow(0 0 38px #37c6f855);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.portal-content {
+  z-index: 5;
+}
+
+.portal-orb {
+  z-index: 2;
+}
+
+.portal-top {
+  z-index: 4;
+}
+
+.portal-content strong,
+.portal-content .portal-link,
+.portal-content .portal-bar {
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 640px) {
+  .portal-background-icon {
+    width: 72%;
+    opacity: 0.1;
+  }
+}
