@@ -43,38 +43,41 @@
 </head>
 <body>
   <header class="site-header">
-      <div class="nav-wrap">
-        <a class="wordmark" href="#top" aria-label="Marc Johnford, home"
-          ><img class="brand-logo" src="assets/images/logo.png" data-site-asset="portfolioLogo" alt="" />
-          <span>
-            <span data-brand-accent>Marc Johnford</span>
-            <span class="wordmark-note">
-              <span data-brand-nickname>Vile Tempest</span>
-              <span class="brand-separator" aria-hidden="true">·</span>
-              <span data-brand-project>MOB EXTRA</span>
-            </span>
-          </span>
-        </a>
-        <button
-          class="menu-toggle"
-          id="menu-toggle"
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Open navigation"
-        >
-          <span></span><span></span>
-        </button>
-        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a class="nav-link nav-top" href="#top">↑ Top</a>
-          <a class="nav-link" href="#work">Work</a>
-          <a class="nav-link" href="#services">Services</a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link nav-cta" href="#contact"
-            >Let’s talk <span>↗</span></a
-          >
-        </nav>
-      </div>
-    </header>
+  <div class="nav-wrap">
+    <a class="wordmark" href="#top" aria-label="Marc Johnford, home"
+      ><img
+        class="brand-logo"
+        src="assets/images/logo.png"
+        data-site-asset="portfolioLogo"
+        alt=""
+      />
+      <span>
+        <span data-brand-accent>Marc Johnford</span>
+        <span class="wordmark-note">
+          <span data-brand-nickname>Vile Tempest</span>
+          <span class="brand-separator" aria-hidden="true">·</span>
+          <span data-brand-project>MOB EXTRA</span>
+        </span>
+      </span>
+    </a>
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Open navigation"
+    >
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a class="nav-link nav-top" href="#top">↑ Top</a>
+      <a class="nav-link" href="#work">Works</a>
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link nav-cta" href="#contact">Let’s talk <span>↗</span></a>
+    </nav>
+  </div>
+</header>
 
   <main id="top">
   <section class="hero wrap">
@@ -522,94 +525,280 @@
 </section>
 
   <section class="services-section" id="services">
-        <div class="wrap section">
-          <div class="section-heading">
-            <div>
-              <p class="kicker">HOW I CAN HELP</p>
-              <h2>Services built around<br />your next idea.</h2>
-            </div>
-            <p class="heading-note">
-              Bring a clear brief or a rough starting point. We’ll shape the
-              right scope, then build something you can put to work.
-            </p>
+  <div class="wrap section">
+    <div class="section-heading">
+      <div>
+        <p class="kicker">HOW I CAN HELP</p>
+        <h2>Services built around<br />your next idea.</h2>
+      </div>
+      <p class="heading-note">
+        Bring a clear brief or a rough starting point. We’ll shape the right
+        scope, then build something you can put to work.
+      </p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="service-number">01</span>
+        <div class="service-icon">↗</div>
+        <h3>Web development</h3>
+        <p>
+          Responsive websites, interactive front-end experiences, and custom web
+          tools that feel considered on every screen.
+        </p>
+        <div class="tags">
+          <span>HTML / CSS</span><span>JavaScript</span><span>Firebase</span>
+        </div>
+        <a href="#contact" data-contact-service="Web development"
+          >Discuss a website <span>↗</span></a
+        >
+      </article>
+      <article class="service-card">
+        <span class="service-number">02</span>
+        <div class="service-icon">⌘</div>
+        <h3>Custom programming</h3>
+        <p>
+          Focused C++ applications, algorithms, and utility software built
+          around a real task or workflow.
+        </p>
+        <div class="tags">
+          <span>C++</span><span>Algorithms</span><span>Utilities</span>
+        </div>
+        <a href="#contact" data-contact-service="Custom programming"
+          >Discuss a tool <span>↗</span></a
+        >
+      </article>
+      <article class="service-card">
+        <span class="service-number">03</span>
+        <div class="service-icon">▦</div>
+        <h3>Excel &amp; VBA automation</h3>
+        <p>
+          Macros and spreadsheet workflows that reduce repetitive work, organize
+          information, and make calculations easier to manage.
+        </p>
+        <div class="tags">
+          <span>Excel</span><span>VBA</span><span>Automation</span>
+        </div>
+        <a href="#contact" data-contact-service="Excel &amp; VBA automation"
+          >Improve a workflow <span>↗</span></a
+        >
+      </article>
+      <article class="service-card">
+        <span class="service-number">04</span>
+        <div class="service-icon">◇</div>
+        <h3>CAD &amp; 3D drafting</h3>
+        <p>
+          Thoughtful AutoCAD drafting, floor plans, spatial layouts, and
+          SketchUp modeling for clearly communicating a design.
+        </p>
+        <div class="tags">
+          <span>AutoCAD</span><span>SketchUp</span><span>3D models</span>
+        </div>
+        <a href="#contact" data-contact-service="CAD &amp; 3D drafting"
+          >Discuss a drawing <span>↗</span></a
+        >
+      </article>
+      <article class="service-card">
+        <span class="service-number">05</span>
+        <div class="service-icon">⌁</div>
+        <h3>Flowcharts &amp; system diagrams</h3>
+        <p>
+          Flowcharts, data flow diagrams, and system architecture visuals that
+          make processes easier to understand and discuss.
+        </p>
+        <div class="tags">
+          <span>DFDs</span><span>Process logic</span><span>Architecture</span>
+        </div>
+        <a
+          href="#contact"
+          data-contact-service="Flowcharts &amp; system diagrams"
+          >Map a system <span>↗</span></a
+        >
+      </article>
+      <article class="service-card service-note">
+        <div class="note-star">✳</div>
+        <p>Have something a little different?</p>
+        <h3>Tell me what you’re trying to solve.</h3>
+        <a href="#contact" data-contact-service="Something else"
+          >Start a conversation <span>↗</span></a
+        >
+      </article>
+    </div>
+    <section
+      class="service-reviews"
+      aria-labelledby="service-reviews-title"
+      data-service-reviews
+    >
+      <div class="service-reviews-heading">
+        <div>
+          <p class="kicker">COMMUNITY FEEDBACK</p>
+          <h3 id="service-reviews-title">Reviews &amp; experiences</h3>
+          <p class="service-reviews-note">
+            Feedback across services, utilities, and the wider Vile Tempest
+            community.
+          </p>
+        </div>
+      </div>
+      <div class="review-top-dashboard">
+        <section class="review-analytics-panel" aria-label="Review analytics">
+          <div class="review-panel-heading">
+            <h4>Reviews overview</h4>
+            <span>All time</span>
           </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <span class="service-number">01</span>
-              <div class="service-icon">↗</div>
-              <h3>Web development</h3>
-              <p>
-                Responsive websites, interactive front-end experiences, and
-                custom web tools that feel considered on every screen.
-              </p>
-              <div class="tags">
-                <span>HTML / CSS</span><span>JavaScript</span
-                ><span>Firebase</span>
+          <div class="review-stat-cards">
+            <div class="review-stat-card">
+              <span>Total reviews</span
+              ><strong data-service-review-count>—</strong
+              ><small>Published feedback</small>
+            </div>
+            <div class="review-stat-card">
+              <span>Average rating</span
+              ><strong
+                ><b data-service-review-average>—</b
+                ><i
+                  class="service-review-stars"
+                  data-service-review-stars
+                  aria-label="No ratings yet"
+                  >☆☆☆☆☆</i
+                ></strong
+              ><small>Across all review types</small>
+            </div>
+          </div>
+          <div
+            class="review-dashboard"
+            aria-label="Rating distribution"
+            data-review-dashboard
+          >
+            <div class="review-dashboard-title">
+              <span>Rating breakdown</span
+              ><span data-review-total>0 total</span>
+            </div>
+            <div class="review-rating-rows">
+              <div class="review-rating-row" data-rating-row="5">
+                <span>5 <i>★</i></span
+                ><span class="review-rating-track"
+                  ><i data-rating-bar="5"></i></span
+                ><span data-rating-count="5">0</span>
               </div>
-              <a href="#contact" data-contact-service="Web development">Discuss a website <span>↗</span></a>
-            </article>
-            <article class="service-card">
-              <span class="service-number">02</span>
-              <div class="service-icon">⌘</div>
-              <h3>Custom programming</h3>
-              <p>
-                Focused C++ applications, algorithms, and utility software built
-                around a real task or workflow.
-              </p>
-              <div class="tags">
-                <span>C++</span><span>Algorithms</span><span>Utilities</span>
+              <div class="review-rating-row" data-rating-row="4">
+                <span>4 <i>★</i></span
+                ><span class="review-rating-track"
+                  ><i data-rating-bar="4"></i></span
+                ><span data-rating-count="4">0</span>
               </div>
-              <a href="#contact" data-contact-service="Custom programming">Discuss a tool <span>↗</span></a>
-            </article>
-            <article class="service-card">
-              <span class="service-number">03</span>
-              <div class="service-icon">▦</div>
-              <h3>Excel &amp; VBA automation</h3>
-              <p>
-                Macros and spreadsheet workflows that reduce repetitive work,
-                organize information, and make calculations easier to manage.
-              </p>
-              <div class="tags">
-                <span>Excel</span><span>VBA</span><span>Automation</span>
+              <div class="review-rating-row" data-rating-row="3">
+                <span>3 <i>★</i></span
+                ><span class="review-rating-track"
+                  ><i data-rating-bar="3"></i></span
+                ><span data-rating-count="3">0</span>
               </div>
-              <a href="#contact" data-contact-service="Excel &amp; VBA automation">Improve a workflow <span>↗</span></a>
-            </article>
-            <article class="service-card">
-              <span class="service-number">04</span>
-              <div class="service-icon">◇</div>
-              <h3>CAD &amp; 3D drafting</h3>
-              <p>
-                Thoughtful AutoCAD drafting, floor plans, spatial layouts, and
-                SketchUp modeling for clearly communicating a design.
-              </p>
-              <div class="tags">
-                <span>AutoCAD</span><span>SketchUp</span><span>3D models</span>
+              <div class="review-rating-row" data-rating-row="2">
+                <span>2 <i>★</i></span
+                ><span class="review-rating-track"
+                  ><i data-rating-bar="2"></i></span
+                ><span data-rating-count="2">0</span>
               </div>
-              <a href="#contact" data-contact-service="CAD &amp; 3D drafting">Discuss a drawing <span>↗</span></a>
-            </article>
-            <article class="service-card">
-              <span class="service-number">05</span>
-              <div class="service-icon">⌁</div>
-              <h3>Flowcharts &amp; system diagrams</h3>
-              <p>
-                Flowcharts, data flow diagrams, and system architecture visuals
-                that make processes easier to understand and discuss.
-              </p>
-              <div class="tags">
-                <span>DFDs</span><span>Process logic</span
-                ><span>Architecture</span>
+              <div class="review-rating-row" data-rating-row="1">
+                <span>1 <i>★</i></span
+                ><span class="review-rating-track"
+                  ><i data-rating-bar="1"></i></span
+                ><span data-rating-count="1">0</span>
               </div>
-              <a href="#contact" data-contact-service="Flowcharts &amp; system diagrams">Map a system <span>↗</span></a>
-            </article>
-            <article class="service-card service-note">
-              <div class="note-star">✳</div>
-              <p>Have something a little different?</p>
-              <h3>Tell me what you’re trying to solve.</h3>
-              <a href="#contact" data-contact-service="Something else">Start a conversation <span>↗</span></a>
-            </article>
+            </div>
+          </div>
+          <div
+            class="review-trend-chart"
+            aria-label="Reviews by month over the last six months"
+            data-review-trend
+          ></div>
+        </section>
+        <div class="review-recent-panel">
+          <div class="review-recent-heading">
+            <h4>Recent reviews</h4>
+            <span>Latest feedback</span>
+          </div>
+          <div class="review-recent-list" data-review-latest>
+            <p class="review-recent-empty">Waiting for reviews…</p>
           </div>
         </div>
-      </section>
+      </div>
+      <div
+        class="review-type-overview"
+        aria-label="Review types"
+        data-review-type-overview
+      ></div>
+      <div class="review-customer-heading">
+        <div>
+          <h4>All reviews</h4>
+          <p>Feedback from across the community</p>
+        </div>
+        <p class="service-review-live is-connecting" data-review-live-status>
+          <span aria-hidden="true"></span> Connecting to live feed
+        </p>
+      </div>
+      <div
+        class="service-review-filters"
+        role="group"
+        aria-label="Filter reviews by category"
+        data-review-filters
+      >
+        <button
+          type="button"
+          class="service-review-filter is-active"
+          data-review-filter="all"
+          aria-pressed="true"
+        >
+          All
+        </button>
+        <button
+          type="button"
+          class="service-review-filter"
+          data-review-filter="General Feedback"
+          aria-pressed="false"
+        >
+          General
+        </button>
+        <button
+          type="button"
+          class="service-review-filter"
+          data-review-filter="Commissions / Services"
+          aria-pressed="false"
+        >
+          Services
+        </button>
+        <button
+          type="button"
+          class="service-review-filter"
+          data-review-filter="Utilities"
+          aria-pressed="false"
+        >
+          Utilities
+        </button>
+        <button
+          type="button"
+          class="service-review-filter"
+          data-review-filter="Buying in Shop"
+          aria-pressed="false"
+        >
+          Shop
+        </button>
+      </div>
+      <div
+        class="service-review-list"
+        data-service-review-list
+        aria-live="polite"
+      >
+        <p class="service-review-state">Loading reviews…</p>
+      </div>
+      <a
+        class="service-reviews-source"
+        href="https://mob-extra.github.io/Vile-Tempest-Official/#reviews"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Reviews from Vile Tempest Official <span aria-hidden="true">↗</span></a
+      >
+    </section>
+  </div>
+</section>
 
   <section class="section wrap about-section" id="about">
         <div class="about-aside">
@@ -779,5 +968,6 @@
   <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/work-projects.js"></script>
   <script src="assets/js/proof-floaters.js"></script>
+  <script type="module" src="assets/js/service-reviews.js"></script>
 </body>
 </html>
