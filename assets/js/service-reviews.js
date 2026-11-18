@@ -184,7 +184,7 @@ function updateSummary() {
     const rounded = Math.round(score);
     average.textContent = score.toFixed(2);
     stars.textContent = "★".repeat(rounded) + "☆".repeat(5 - rounded);
-    stars.setAttribute("aria-label", `${score.toFixed(1)} out of 5 stars`);
+    stars.setAttribute("aria-label", `${score.toFixed(2)} out of 5 stars`);
     animateReviewCount(count, currentReviews.length);
   }
 
@@ -321,7 +321,7 @@ function renderRecentReviews() {
     meta.append(author, category);
     const rating = document.createElement("span");
     rating.className = "review-recent-score";
-    rating.textContent = `★ ${Number(review.rating).toFixed(1)}`;
+    rating.textContent = `★ ${Number(review.rating).toFixed(2)}`;
     const comment = document.createElement("p");
     comment.textContent = review.comment.trim();
     row.append(meta, rating, comment);
@@ -367,7 +367,7 @@ function renderReviewTypeOverview() {
     button.dataset.reviewTypeSelect = name;
     button.setAttribute(
       "aria-label",
-      `Filter ${name}: ${items.length} reviews, ${mean ? mean.toFixed(1) : "no"} average rating`,
+      `Filter ${name}: ${items.length} reviews, ${mean ? mean.toFixed(2) : "no"} average rating`,
     );
     const title = document.createElement("span");
     title.className = "review-type-name";
@@ -377,7 +377,7 @@ function renderReviewTypeOverview() {
     metric.textContent = String(items.length);
     const note = document.createElement("span");
     note.className = "review-type-meta";
-    note.textContent = `${items.length ? mean.toFixed(1) : "—"} ★ average · ${currentReviews.length ? Math.round((items.length / currentReviews.length) * 100) : 0}% of reviews`;
+    note.textContent = `${items.length ? mean.toFixed(2) : "—"} ★ average · ${currentReviews.length ? Math.round((items.length / currentReviews.length) * 100) : 0}% of reviews`;
     const bar = document.createElement("i");
     bar.className = "review-type-bar";
     bar.style.setProperty(
