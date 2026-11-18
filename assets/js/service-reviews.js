@@ -182,7 +182,7 @@ function updateSummary() {
       currentReviews.reduce((sum, review) => sum + Number(review.rating), 0) /
       currentReviews.length;
     const rounded = Math.round(score);
-    average.textContent = score.toFixed(1);
+    average.textContent = score.toFixed(2);
     stars.textContent = "★".repeat(rounded) + "☆".repeat(5 - rounded);
     stars.setAttribute("aria-label", `${score.toFixed(1)} out of 5 stars`);
     animateReviewCount(count, currentReviews.length);
